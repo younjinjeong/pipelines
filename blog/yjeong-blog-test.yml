@@ -16,4 +16,4 @@ inputs:
 run:
   # path: ls
   # args: [-alR]
-  path: yjeong_blog_run_tests.sh
+  path: yjeong-pipelines-git/blog/yjeong_blog_run_tests.sh
