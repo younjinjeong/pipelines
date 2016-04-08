@@ -1,0 +1,20 @@
+---
+resources:
+- name: yjeong-blog-git
+  type: git
+  source:
+    uri: https://github.com/younjinjeong/yjeong.cfapps.io/
+- name: yjeong-pipelines-git
+  type: git
+  source:
+    uri: https://github.com/younjinjeong/pipelines/
+
+jobs:
+- name: yjeong-blog-test-app
+  public: true
+  plan:
+  - get: yjeong-blog-git
+  - get: yjeong-pipelines-git
+    trigger: true
+  - task: yjeong-blog-test
+    file: blog/yjeong-blog-test.yml
