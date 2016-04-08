@@ -17,4 +17,4 @@ jobs:
   - get: yjeong-pipelines-git
     trigger: true
   - task: yjeong-blog-test
-    file: yjeong-pipelines-git/pipelines/blog/yjeong-blog-test.yml
+    file: yjeong-pipelines-git/blog/yjeong-blog-test.yml
