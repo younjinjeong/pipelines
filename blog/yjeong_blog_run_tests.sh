@@ -10,4 +10,5 @@ cd gopath/src/github.com/cloudfoundry-community/simple-go-web-app/
 
 go get -v github.com/spf13/hugo
 go get -u -v github.com/spf13/hugo 
+cd yjeong.cfapps.io
 hugo 
