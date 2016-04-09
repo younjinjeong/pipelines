@@ -10,7 +10,7 @@ set -e
 
 printenv
 uname -a 
-apk -h
+apk add git
 git -h
 go get -v github.com/spf13/hugo
 go get -u -v github.com/spf13/hugo 
