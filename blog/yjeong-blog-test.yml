@@ -14,7 +14,7 @@ inputs:
 #  path: gopath/src/github.com/cloudfoundry-community/simple-go-web-app
 
 run:
-  #path: ls
-  #args: [-alR]
-  #path: yjeong_blog_run_tests.sh
-  path: /bin/sh
+  path: ls
+  args: [-alR]
+  path: printenv
+  path: /bin/sh ~/yjeong-pipelines-git/blog/yjeong_blog_run_tests.sh
