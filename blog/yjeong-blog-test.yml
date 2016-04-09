@@ -16,4 +16,5 @@ inputs:
 run:
   #path: ls
   #args: [-alR]
-  path: yjeong_blog_run_tests.sh
+  #path: yjeong_blog_run_tests.sh
+  path: /bin/bash
