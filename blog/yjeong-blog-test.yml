@@ -16,6 +16,7 @@ inputs:
 run:
   path: ls
   args: [-alR]
-  path: printenv
+  #path: printenv
   #path: chmod +x blog/yjeong_blog_run_tests.sh
-  #path: /bin/sh ~/yjeong-pipelines-git/blog/yjeong_blog_run_tests.sh
+  path: /bin/sh 
+  args: [./yjeong-pipelines-git/blog/yjeong_blog_run_tests.sh]
