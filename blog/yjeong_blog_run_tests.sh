@@ -8,10 +8,19 @@ set -e
 #export GOPATH=$(pwd)/gopath:$(pwd)/gopath/src/github.com/cloudfoundry-community/simple-go-web-app/Godeps/_workspace
 #cd gopath/src/github.com/cloudfoundry-community/simple-go-web-app/
 
-printenv
-uname -a 
+# Get and install Git
 apk add --update git 
 go get -v github.com/spf13/hugo
 go get -u -v github.com/spf13/hugo 
-cd ./yjeong-blog-git
-hugo 
+
+# Set staging repo
+cd /tmp/
+git clone https://github.com/younjinjeong/yjeong-staging.cfapps.io.git yjeong-blog-stag
+
+# Test blog with Hugo, create output as stag
+cd /root/yjeong-blog-git
+hugo -d /tmp/yjeong-blog-stag/
+cd /tmp/yjeong-blog-stag/
+git add . 
+git commit -m "Staged by Concourse"
+git push origin master

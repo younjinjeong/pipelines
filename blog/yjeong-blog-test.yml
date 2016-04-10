@@ -11,12 +11,7 @@ image: docker:///golang#1.6-alpine
 inputs:
 - name: yjeong-blog-git
 - name: yjeong-pipelines-git
-  #path: gopath/src/github.com/cloudfoundry-community/simple-go-web-app
 
 run:
-  path: ls
-  args: [-alR]
-  #path: printenv
-  #path: chmod +x blog/yjeong_blog_run_tests.sh
   path: /bin/sh 
   args: [./yjeong-pipelines-git/blog/yjeong_blog_run_tests.sh]

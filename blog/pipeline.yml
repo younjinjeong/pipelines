@@ -8,6 +8,10 @@ resources:
   type: git
   source:
     uri: https://github.com/younjinjeong/pipelines/
+- name: yjeong-blog-staging-git
+  type: git
+  sources: 
+    uri: https://github.com/younjinjeong/yjeong-staging.cfapps.io.git
 - name: yjeong-blog-staging
   type: cf
   source: 
@@ -29,7 +33,9 @@ jobs:
     trigger: true
   - task: yjeong-blog-test
     file: yjeong-pipelines-git/blog/yjeong-blog-test.yml
+  - get: yjeong-blog-staging-git
+    trigger: true
   - put: yjeong-blog-staging
     params:
-      path: yjeong-blog-git/public/
+      path: yjeong-blog-staging-git
       manifest: yjeong-pipelines-git/blog/yjeong_blog_manifest.yml
