@@ -1,0 +1,9 @@
+applications:
+- buildpack: staticfile_buildpack
+  disk_quota: 1024M
+  domain: cfapps.io
+  host: yjeong
+  instances: 1
+  memory: 64M
+  name: yjeong
+  stack: cflinuxfs2
