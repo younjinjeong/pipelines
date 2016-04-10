@@ -10,8 +10,7 @@ set -e
 
 printenv
 uname -a 
-apk add --update git python python-dev py-pip build-base
-git -h
+apk add --update git 
 go get -v github.com/spf13/hugo
 go get -u -v github.com/spf13/hugo 
 cd ./yjeong-blog-git
