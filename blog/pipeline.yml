@@ -14,6 +14,7 @@ jobs:
   public: true
   plan:
   - get: yjeong-blog-git
+    trigger: true
   - get: yjeong-pipelines-git
     trigger: true
   - task: yjeong-blog-test
