@@ -8,10 +8,20 @@ resources:
   type: git
   source:
     uri: https://github.com/younjinjeong/pipelines/
+- name: yjeong-blog-staging
+  type: cf
+  source: 
+    api: {{cf-api}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}} 
+    space: {{cf-space}} 
+    skip_cert_check: false
 
 jobs:
 - name: yjeong-blog-test-app
   public: true
+  serial: true
   plan:
   - get: yjeong-blog-git
     trigger: true
@@ -19,3 +29,5 @@ jobs:
     trigger: true
   - task: yjeong-blog-test
     file: yjeong-pipelines-git/blog/yjeong-blog-test.yml
+  - put: yjeong-blog-staging
+      path: yjeong-blog-git
