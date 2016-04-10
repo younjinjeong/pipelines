@@ -10,7 +10,7 @@ set -e
 
 printenv
 uname -a 
-apk add --update git python python-dev py-pup build-base
+apk add --update git python python-dev py-pip build-base
 git -h
 go get -v github.com/spf13/hugo
 go get -u -v github.com/spf13/hugo 
