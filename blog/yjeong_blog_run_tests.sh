@@ -9,9 +9,9 @@ set -e
 #cd gopath/src/github.com/cloudfoundry-community/simple-go-web-app/
 
 # Get and install Git
-apk add --update git 
-go get -v github.com/spf13/hugo
-go get -u -v github.com/spf13/hugo 
+#apk add --update git 
+#go get -v github.com/spf13/hugo
+#go get -u -v github.com/spf13/hugo 
 
 
 # Test blog with Hugo, create output as stag
