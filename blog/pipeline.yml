@@ -16,7 +16,7 @@ resources:
     password: {{cf-password}}
     organization: {{cf-organization}} 
     space: {{cf-space}} 
-    skip_cert_check: {{skip_cert_check}}
+    skip_cert_check: true
 
 jobs:
 - name: yjeong-blog-test-app
