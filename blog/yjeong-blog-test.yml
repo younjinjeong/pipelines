@@ -2,11 +2,11 @@
 platform: linux
 
 #image: docker:///golang#1.6-alpine
- image_resource:
-   type: docker-image
-   source:
-     repository: publysher/hugo
-     tag: 'latest'
+image_resource:
+  type: docker-image
+  source:
+    repository: publysher/hugo
+    tag: 'latest'
 
 inputs:
 - name: yjeong-blog-git
