@@ -1,9 +1,9 @@
 applications:
 - buildpack: staticfile_buildpack
   disk_quota: 1024M
-  domain: cfapps.io
-  host: yjeong
+  domain: .local.pcfdev.io
+  host: myblog
   instances: 1
-  memory: 64M
-  name: yjeong
+  memory: 256M
+  name: myblog
   stack: cflinuxfs2
