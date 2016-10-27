@@ -33,3 +33,5 @@ jobs:
     params:
       path: yjeong-blog-git/public/
       manifest: yjeong-pipelines-git/blog/yjeong_blog_manifest.yml
+      environment_variables:
+        PORT: ‘80’
